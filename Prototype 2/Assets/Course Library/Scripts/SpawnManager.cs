@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public float startDelay = 2;
-    public float spawnInterval = 1.5f;
+    public float spawnInterval = 1.0f-10.0f;
 
 
     // Start is called before the first frame update
