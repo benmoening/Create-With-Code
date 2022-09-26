@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControllerX : MonoBehaviour
 {
     public bool gameOver;
+    public bool isLowEnough < 15;
 
     public float floatForce;
     private float gravityModifier = 1.5f;
@@ -25,8 +26,9 @@ public class PlayerControllerX : MonoBehaviour
         playerAudio = GetComponent<AudioSource>();
 
         // Apply a small upward force at the start of the game
-        playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
         playerRb = GetComponent<Rigidbody>();
+        playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        
 
     }
 
@@ -37,6 +39,7 @@ public class PlayerControllerX : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && !gameOver)
         {
             playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
+            isLowEnough = true;
         }
     }
 
