@@ -37,6 +37,7 @@ public class PlayerControllerX : MonoBehaviour
             turboBoost.GetComponent<ParticleSystem>().Play();
         }
 
+        
     }
 
     // If Player collides with powerup, activate powerup
