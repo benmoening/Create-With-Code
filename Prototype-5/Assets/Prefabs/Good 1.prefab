@@ -125,3 +125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725fb8719db6f1b48aacafaceef8947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRb: {fileID: 0}
+  minSpeed: 12
+  maxSpeed: 16
+  maxTorque: 10
+  xRange: 4
+  ySpawnPos: -6
+  gameManager: {fileID: 0}
+  pointValue: 1
+  explosionParticle: {fileID: 15085447402717889, guid: 743ce290c74ae49c19aa3f128322fc7e, type: 3}
