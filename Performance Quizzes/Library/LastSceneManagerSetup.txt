@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Unit 1 Quiz/Scenes/Unit 1 Quiz.unity
+- path: Assets/Unit 2 Quiz/Scenes/Unit 2 Quiz.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
