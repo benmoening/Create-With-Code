@@ -19,6 +19,8 @@ public class PlayerControllerX : MonoBehaviour
     public AudioClip explodeSound;
     public AudioClip boingSound;
 
+    public float yMax = 15.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,12 @@ public class PlayerControllerX : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
             
+        }
+
+        if (transform.position.y > yMax)
+        {
+            transform.position = new Vector3(transform.position.x, yMax, transform.position.z);
+            Debug.Log("Ceiling Hit");
         }
     }
 

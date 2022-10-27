@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip crashSound;
     public AudioSource playerAudio;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,9 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
+
+        
+        
     }
     void OnCollisionEnter(Collision collision)
     {
