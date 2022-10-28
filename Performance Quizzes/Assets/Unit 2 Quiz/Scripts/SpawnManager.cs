@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject projectilePrefab;
-    
+    public GameObject[] projectilePrefab;
+    public float spawnRangeX = 5;
+    public float startDelay = 0f;
+    public float spawnInterval = 1.0f;
+    public float spawnPosZ = 8f;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnStuff());
+        
+        InvokeRepeating("SpawnStuff", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
@@ -19,16 +23,10 @@ public class SpawnManager : MonoBehaviour
         
     }
 
-    public IEnumerator SpawnStuff()
+    public void SpawnStuff()
     {
-        public int i > 0, i = 1; **********************
-        SpawnPrefab();
-        yield return new WaitForSeconds(1.0f);
-    }
-
-    public void SpawnPrefab()
-    {
-        Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-        StartCoroutine(SpawnStuff());
+        int projectileIndex = Random.Range(0, projectilePrefab.Length);
+        Vector3 spawnpos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 2, spawnPosZ);
+        Instantiate(projectilePrefab[projectileIndex], new Vector3(0, 0, 8), projectilePrefab[projectileIndex].transform.rotation);
     }
 }
