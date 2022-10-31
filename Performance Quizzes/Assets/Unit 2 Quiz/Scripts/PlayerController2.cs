@@ -8,6 +8,13 @@ public class PlayerController2 : MonoBehaviour
     public float verticalInput;
     public float speed = 5f;
     public float xRange = 5.0f;
+    public float fireRate = 1.0f;
+    public float cycleTime = 0.0f;
+    public GameObject projectilePrefab;
+    public float projectileSpeed;
+    
+   
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +42,24 @@ public class PlayerController2 : MonoBehaviour
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
             Debug.Log("Left Border Hit");
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && canShoot)
+        {
+            StartCoroutine(FireRate());
+            
+        }
+    }
+
+    IEnumerator FireRate()
+    {
+        canShoot = false;
+        InstantiateProjectile();
+        yield return new WaitForSeconds(1.0f);
+        canShoot = true;
+    }
+
+    void InstantiateProjectile()
+    {
+        Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
     }
 }

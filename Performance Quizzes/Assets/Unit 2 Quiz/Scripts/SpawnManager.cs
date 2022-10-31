@@ -26,7 +26,7 @@ public class SpawnManager : MonoBehaviour
     public void SpawnStuff()
     {
         int projectileIndex = Random.Range(0, projectilePrefab.Length);
-        Vector3 spawnpos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 2, spawnPosZ);
-        Instantiate(projectilePrefab[projectileIndex], new Vector3(0, 0, 8), projectilePrefab[projectileIndex].transform.rotation);
+        Vector3 spawnpos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, spawnPosZ);
+        Instantiate(projectilePrefab[projectileIndex], new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, 8), projectilePrefab[projectileIndex].transform.rotation);
     }
 }
