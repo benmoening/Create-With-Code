@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] projectilePrefab;
     public float spawnRangeX = 5;
     public float startDelay = 0f;
-    public float spawnInterval = 1.0f;
+    public float spawnInterval = 3.0f;
     public float spawnPosZ = 8f;
 
     // Start is called before the first frame update

@@ -11,15 +11,13 @@ public class PlayerController2 : MonoBehaviour
     public float fireRate = 1.0f;
     public float cycleTime = 0.0f;
     public GameObject projectilePrefab;
-    public float projectileSpeed;
-    
-   
-    
+    public float delay = 0.0f;
+    public float cooldown = 1.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -43,23 +41,21 @@ public class PlayerController2 : MonoBehaviour
             Debug.Log("Left Border Hit");
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && canShoot)
+        if (Input.GetKeyDown(KeyCode.Space) && delay < Time.time)
         {
-            StartCoroutine(FireRate());
-            
+            delay = Time.time + cooldown;
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+
         }
     }
 
-    IEnumerator FireRate()
+    void OnCollisionEnter(Collision collision)
     {
-        canShoot = false;
-        InstantiateProjectile();
-        yield return new WaitForSeconds(1.0f);
-        canShoot = true;
+        if (collision.gameObject.CompareTag("enemy"))
+        {
+            Destroy(this.gameObject);
+            Debug.Log("Hit Enemy");
+        }
     }
 
-    void InstantiateProjectile()
-    {
-        Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-    }
 }

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6558088523425064170}
   - component: {fileID: 6558088523425064171}
   - component: {fileID: 6558088523425064172}
+  - component: {fileID: -7503895320204221098}
   m_Layer: 0
   m_Name: Black Enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,3 +97,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-7503895320204221098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558088523425064173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61a635b930f9994d8938e521df9f25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  projectilePrefab: {fileID: 6120898550400227428, guid: 6b47680cb5f96e34ab7095655238fe25, type: 3}
+  delay: 0
+  cooldown: 5
