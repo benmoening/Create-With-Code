@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8989249672396217805}
   - component: {fileID: 8989249672396217806}
   - component: {fileID: 8989249672396217807}
-  - component: {fileID: -1682336729970687453}
   - component: {fileID: -7590092043797658308}
+  - component: {fileID: 8322788239440193216}
   m_Layer: 0
   m_Name: Metal Ball
   m_TagString: Bullet
@@ -92,12 +92,26 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8989249672396217800}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-1682336729970687453
+--- !u!114 &-7590092043797658308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8989249672396217800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f4c38259ef826341810203b28d3febc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  _rb: {fileID: 0}
+--- !u!54 &8322788239440193216
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,17 +127,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-7590092043797658308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8989249672396217800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f4c38259ef826341810203b28d3febc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  _rb: {fileID: 0}

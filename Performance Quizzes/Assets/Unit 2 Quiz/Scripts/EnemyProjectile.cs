@@ -6,6 +6,7 @@ public class EnemyProjectile : MonoBehaviour
 {
     public float speed = 5.0f;
     public Rigidbody _rb;
+    public float topBound = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,10 @@ public class EnemyProjectile : MonoBehaviour
     void Update()
     {
         BulletMovement();
+        if (transform.position.z < -topBound)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void BulletMovement()

@@ -8,6 +8,7 @@ public class BlackEnemy : MonoBehaviour
     public GameObject projectilePrefab;
     public float delay = 0.0f;
     public float cooldown = 5.0f;
+    public float topBound = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +27,12 @@ public class BlackEnemy : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
 
         }
+
+        if (transform.position.z < -topBound)
+        {
+            Destroy(gameObject);
+        }
     }
+
+    
 }

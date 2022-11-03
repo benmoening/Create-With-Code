@@ -7,6 +7,8 @@ TagManager:
   - coin
   - enemy
   - Bullet
+  - Blue Enemy
+  - Black Enemy
   layers:
   - Default
   - TransparentFX

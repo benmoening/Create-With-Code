@@ -44,18 +44,24 @@ public class PlayerController2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && delay < Time.time)
         {
             delay = Time.time + cooldown;
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, transform.position + new Vector3(0, 0, 1), projectilePrefab.transform.rotation);
 
         }
+
+        
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
+            
             Destroy(this.gameObject);
-            Debug.Log("Hit Enemy");
+            Time.timeScale = 0;
+            Debug.Log("Game Over");
+
         }
+        
     }
 
 }
