@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8250516099316464252}
   - component: {fileID: 8250516099316464255}
   - component: {fileID: 8250516099316464251}
-  - component: {fileID: -7176003334552560105}
+  - component: {fileID: -7121106651233968927}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8250516099316464254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.61, y: 1, z: -5.3}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -91,7 +91,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8250516099316464254}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e8c078038658fa14b930b6f771187075, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -110,9 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  shouldMove: 1
-  strength: 15
---- !u!54 &-7176003334552560105
+  shouldMove: 0
+--- !u!54 &-7121106651233968927
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,5 +125,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
