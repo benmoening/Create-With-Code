@@ -20,7 +20,7 @@ public class Pitcher : MonoBehaviour
         if (delay < Time.time)
         {
             delay = Time.time + cooldown;
-            Instantiate(projectilePrefab, transform.position + new Vector3(1, 0, 1), projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, transform.position + new Vector3(2, 0, 2), projectilePrefab.transform.rotation);
         }
     }
 }
