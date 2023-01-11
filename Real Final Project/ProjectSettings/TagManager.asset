@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ball
   - Bat
+  - Game Manager
+  - Pitcher
   layers:
   - Default
   - TransparentFX
